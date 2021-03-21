@@ -1,0 +1,47 @@
+html{
+    font-size: 12px;
+    background : url('./pictures/pexels-josh-sorenson-995301.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: fantasy;
+}
+.keys{
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.key{
+    border: solid black;
+    border-radius: 5px;
+    background: dimgray;
+    background:rgba(0,0,0,0.3);
+    margin: 2px;
+    padding: 5px;
+    text-align: center;
+    color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all .07s  ease;
+    width: 100px;
+    text-shadow: 0 0 .5rem black;
+}
+kbd {
+  display: block;
+  font-size: 30px;
+}
+.playing{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+.sound{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: gold;
+}
