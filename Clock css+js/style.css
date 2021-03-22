@@ -1,0 +1,71 @@
+html{
+    background: url('./pictures/pexels-karolina-grabowska-4397907.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+body{
+    align-items: center;
+    margin-right: 50%;
+    display: flex;
+}
+
+.clock{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border: 20px solid beige;
+    border-radius: 50%;
+    margin: 50px auto;
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 4px rgba(0,0,0,0.1),
+        0 0 10px rgba(0,0,0,0.2);
+}
+.clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+}
+
+.handHours {
+      width: 48%;
+      height: 12px;
+      background: black;
+      border-radius: 75%;
+      position: absolute;
+      top: 49.80%;
+      left: 2.25%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: ease-in-out;
+    }
+    
+.handMinutes {
+      width: 45%;
+      height: 10px;
+      background: black;
+      border-radius: 75%;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: ease-in-out;
+    }
+.handSeconds {
+      width: 40%;
+      height: 7px;
+      background: red;
+      border-radius: 75%;
+      position: absolute;
+      top: 50.80%;
+      left: 10%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: ease-in-out;
+    }
