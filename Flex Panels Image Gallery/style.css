@@ -1,0 +1,72 @@
+.panel1 {background-image: url("./pictures/pexels-joy-anne-pura-1186116.jpg");}
+.panel2 {background-image: url("./pictures/pexels-pixabay-461049.jpg");}
+.panel3 {background-image: url("./pictures/pexels-tobias-bjørkli-1559402.jpg");}
+.panel4 {background-image: url("./pictures/pexels-flickr-146080.jpg");}
+.panel5 {background-image: url("./pictures/pexels-marcin-dampc-1684187.jpg");}
+
+html{
+    box-sizing: border-box;
+    font-family: fantasy;
+    font-size: 40px;
+    background: #F3F1F1;
+    font-weight: 200;
+}
+body{
+    margin: 0px;
+}
+*, *:before, *:after {
+      box-sizing: inherit;
+}
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex
+}
+.panel{
+    box-shadow: inset 0 0 0 5px rgba(189,162,164,0.1);
+    color: whitesmoke;
+    text-align: center;
+    align-items: center;
+    transition:
+        font-size 0.7s ease-in,
+        flex 0.7s ease-in,
+        background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.panel > * {
+      margin: 0;
+      width: 100%;
+      transition: transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.panel.open-active > *:first-child {transform: translateY(-100%);}
+.panel > *:first-child {transform: translateY(0);}
+.panel.open-active > *:last-child {transform: translateY(100%);}
+.panel > *:last-child {transform: translateY(0);}
+.panel p {
+      text-transform: uppercase;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 2em;
+}
+.panel p:nth-child(2) {
+      font-size: 4em;
+}
+.panel.open {
+      font-size: 40px;
+      flex: 5;
+}
+@media only screen and (max-width: 600px) {
+      .panel p {
+        font-size: 1em;
+      }
+    }
