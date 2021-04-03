@@ -1,0 +1,10 @@
+body{
+    background: #FFC7F0;
+}
+.text{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 300px;
+    font-size: 50px;
+}
