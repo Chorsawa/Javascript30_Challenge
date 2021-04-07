@@ -1,0 +1,107 @@
+html {
+  box-sizing: border-box;
+  background: url("./pictures/pexels-naim-benjelloun-2104568.jpg") center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+svg {
+  fill: white;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 50%;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  padding: 20px;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: 200;
+}
+
+.plates {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.plates li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  font-weight: 100;
+  display: flex;
+}
+
+.plates label {
+  flex: 1;
+  cursor: pointer;
+}
+
+.plates input {
+  display: none;
+}
+
+.plates input + label:before {
+  content: "⬜️";
+  margin-right: 10px;
+}
+
+.plates input:checked + label:before {
+  content: "🌮";
+}
+
+.add-items {
+  margin-top: 20px;
+}
+
+.add-items input {
+  padding: 10px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 3px 0px #5b5c5c;
+	background:linear-gradient(to bottom, #cacccb 5%, #afb8b8 100%);
+	background-color:#cacccb;
+	border-radius:5px;
+	border:1px solid #a3adaa;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #8a9492;
+        margin: 5px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #afb8b8 5%, #cacccb 100%);
+	background-color:#afb8b8;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
