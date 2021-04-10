@@ -29,12 +29,28 @@ function populateList(plates = [], platesList){
     platesList.innerHTML = plates.map((plate, i) => {
         return`
             <li>
-                <input type = "checkbox" data-index = ${i} id = "item${i}" 
+                <input type = "checkbox" name = "allChecks" data-index = ${i} id = "item${i}" 
                     ${plate.done ? 'checked' : ''}/>
                 <label for = "item${i}">${plate.text}</label>
             </li>
         `;
     }).join('');
+}
+
+function checkEvery(){
+    var items = document.getElementsByName('allChecks');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type === 'checkbox')
+                items[i].checked = true;
+        }
+}
+
+function unCheckEvery(){
+    var items = document.getElementsByName('allChecks');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type === 'checkbox')
+                items[i].checked = false;
+        }
 }
 
 function toggleDone(e){
@@ -50,8 +66,10 @@ addItems.addEventListener('submit', addItem);
 
 clearAll.addEventListener('click', removeItems);
 
+checkAll.addEventListener('click', checkEvery);
+
+uncheckAll.addEventListener('click', unCheckEvery);
+
 itemsList.addEventListener('click', toggleDone);
 
 populateList(items, itemsList);
-
-//still need to write functions for buttons check all and uncheck all
