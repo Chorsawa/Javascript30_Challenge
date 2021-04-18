@@ -24,7 +24,7 @@ function handleEnter(){
 }
 
 function handleLeave(){
-    setTimeout(() => this.classList.remove('trigger-enter-active'));
+    setTimeout(() => this.classList.remove('trigger-enter-active', 'trigger-enter'));
     background.classList.remove('open');
 }
 
